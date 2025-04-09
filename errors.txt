@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 276: expected statement.
-    at right
-            ^
+File "game/three_in_one.rpy", line 11: invalid syntax
+    default cl1 = [0] * 9
+             ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sat Feb 22 11:07:53 2025
+Wed Apr  9 18:18:02 2025

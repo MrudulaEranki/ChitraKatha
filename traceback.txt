@@ -1,24 +1,99 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 107, in script
-    "Nutritional Marvel: Packed with protein, fiber, and essential vitamins, green gram is a powerhouse of nutrition. It contains approximately 24% protein, making it an excellent choice for those seeking healthy, plant-based options. Its high fiber content aids digestion and provides a sense of fullness, making it a beloved ingredient in many households."
-ValueError: unsupported format character 'p' (0x70) at index 143
+  File "game/three_in_one.rpy", line 313, in script call
+    label start:
+  File "game/three_in_one.rpy", line 309, in script
+    globals()["clp"+str(z)].append(0)
+  File "game/three_in_one.rpy", line 313, in script call
+    label start:
+  File "game/three_in_one.rpy", line 309, in script
+    globals()["clp"+str(z)].append(0)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/three_in_one.rpy", line 252, in execute
+    return
+  File "game/three_in_one.rpy", line 252, in execute
+    return
+  File "game/three_in_one.rpy", line 256, in execute
+    timer 1 repeat True action If(ktmr>0,true=SetVariable('ktmr',ktmr-1),false=Return())
+  File "game/three_in_one.rpy", line 257, in execute
+    for z in range(1,7):
+  File "game/three_in_one.rpy", line 258, in execute
+    for i in range(0,9):
+  File "game/three_in_one.rpy", line 258, in keywords
+    for i in range(0,9):
+  File "game/three_in_one.rpy", line 258, in <module>
+    for i in range(0,9):
+KeyError: 6
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 107, in script
-    "Nutritional Marvel: Packed with protein, fiber, and essential vitamins, green gram is a powerhouse of nutrition. It contains approximately 24% protein, making it an excellent choice for those seeking healthy, plant-based options. Its high fiber content aids digestion and provides a sense of fullness, making it a beloved ingredient in many households."
-  File "C:\Users\Dell\Downloads\renpy-8.3.4-sdk\renpy\ast.py", line 2579, in execute
-    Say.execute(self)
-  File "C:\Users\Dell\Downloads\renpy-8.3.4-sdk\renpy\ast.py", line 621, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Dell\Downloads\renpy-8.3.4-sdk\renpy\exports\sayexports.py", line 121, in say
-    what = what % tag_quoting_dict
-ValueError: unsupported format character 'p' (0x70) at index 143
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\main.py", line 652, in main
+    run(restart)
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\execution.py", line 958, in run_context
+    context.run()
+  File "game/three_in_one.rpy", line 313, in script call
+    label start:
+  File "game/three_in_one.rpy", line 309, in script
+    globals()["clp"+str(z)].append(0)
+  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
+  File "game/three_in_one.rpy", line 313, in script call
+    label start:
+  File "game/three_in_one.rpy", line 309, in script
+    globals()["clp"+str(z)].append(0)
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\ast.py", line 1980, in execute
+    self.call("execute")
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\ast.py", line 1959, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Admin\Downloads\hackathonproject2-1.0-dists\hackathonproject2-1.0-dists\hackathonproject2-1.0-win\hackathonproject2-1.0-win\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/three_in_one.rpy", line 252, in execute
+    return
+  File "game/three_in_one.rpy", line 252, in execute
+    return
+  File "game/three_in_one.rpy", line 256, in execute
+    timer 1 repeat True action If(ktmr>0,true=SetVariable('ktmr',ktmr-1),false=Return())
+  File "game/three_in_one.rpy", line 257, in execute
+    for z in range(1,7):
+  File "game/three_in_one.rpy", line 258, in execute
+    for i in range(0,9):
+  File "game/three_in_one.rpy", line 258, in keywords
+    for i in range(0,9):
+  File "game/three_in_one.rpy", line 258, in <module>
+    for i in range(0,9):
+KeyError: 6
 
-Windows-10-10.0.22631 AMD64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.4.24120703
 hackathonproject2 1.0
-Fri Feb 21 12:30:51 2025
+Wed Apr  9 18:29:37 2025
