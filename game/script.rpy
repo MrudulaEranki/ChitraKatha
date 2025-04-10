@@ -47,115 +47,84 @@ define kon = Character('Kontamalli')
 
 
 label start:
-
+    play music "throughout_the_game.mp3"
     #Scene 1
     scene bg pond_side
     with fade
-    "As the sun began to set, casting a golden hue over the village, Amidalraji and Kontamalli found themselves relaxing under the shade of a large banyan tree. The gentle rustle of leaves and the chirping of birds created a serene atmosphere, perfect for their afternoon chat."
+    "The sun was going down. Amidalraji and Kontamalli sat under a big banyan tree. The leaves rustled, and birds chirped. It was a nice, quiet time to talk."
 
     show a_smiletalk at left
-    ami "You know, Kontamalli, I’ve been craving atlu all day. Wouldn’t it be wonderful to make some?"
+    ami  "Kontamalli, I really want some atlu!"
 
     show k_smilewide at right
-    kon  "Atlu? Yes! That sounds delicious! We should gather some ingredients from the fields."
-
+    kon  "Yum! Let’s go get what we need from the fields but before that let’s play a mini game!!"
+    play sound "excited_twinkle1.mp3"
     
-
     menu:
-        "Want to know more about atlu? ":
+        "What are atlu? ":
             jump exp_choice1
-        "I'm Good!":
+        "Continue the game!":
             jump common1
     
 label exp_choice1:
     scene bg brown_attu4
     with fade
-    "Atlu, a delightful food item from Telangana, is a type of crepe or dosa that embodies the essence of traditional South Indian cuisine. These thin, crispy delights are made from various flours, with rice flour being the most common base."
-
-    "The Allure of Atlu- Imagine biting into a perfectly cooked attu, its surface golden brown and slightly crisp. The aroma of freshly ground spices wafts through the air as you savor the first bite."
-    "The texture is delightfully chewy yet crisp, with a hint of spice that dances on your palate. "
-
-    "Atlu can be prepared using different flours such as rice flour, maize flour, or even jowar flour, each bringing its own character to the dish."
-
-
-    "The process of making atlu is as exciting as eating them! From grinding the grains to mixing in spices and cooking them on a hot griddle, every step is filled with anticipation."
-    "As the batter sizzles on the pan, it transforms into a golden masterpiece that beckons you to indulge. Atlu can be served in various ways—paired with spicy chutneys, tangy pickles, or even sweet accompaniments like jaggery syrup for those who enjoy contrasting flavors."
-    " Whether enjoyed as breakfast, a snack, or part of a festive meal, atlu brings people together around the table. In Telangana, where culinary traditions run deep, atlu stand out as not just food but as a celebration of local ingredients and flavors."
-
+    play sound "atly_sizling.mp3"
+    "Amidalraji and Kontamalli loved atlu! Atlu are yummy, thin pancakes from Telangana. They can be soft or crispy, and you can make them in many fun ways!
+    Some atlu are made with rice flour and spicy stuff like chili, onions, and curry leaves. Others are sweet and soft, like the ones made with corn. You can even mix in veggies like ridge gourd to make them extra tasty!
+    Cooking atlu is fun too! Pour the batter on a hot pan, wait for the sizzle... and flip! It smells so good! You can eat them with chutney, pickles, or even a little jaggery for sweetness. Mmm... so many flavors!"
     jump common1
 
 label common1:
 
     scene bg TelanganaMap
-    "The two friends exchanged excited glances, their minds already racing with thoughts of fluffy atlu. They knew that to make the batter, they would need a variety of grains and pulses native to their region. "
+    "Amidalraji and Kontamalli smiled big. They were already thinking about soft, yummy atlu!
 
     show a_normal at left
-    ami "Let’s collect some tasty gram. They’ll add a lovely flavor to our batter!"
+    ami  "Let’s get some gram—it’ll make our batter super tasty!
     hide a_normal
 
-    "With their plan in mind, Amidalraji and Kontamalli set off into the fields. The air was filled with the earthy scent of soil and growing crops. As they walked, Amidalraji pointed out different grains along the way. "
-
+     "Off they went into the fields. The air smelled fresh, and little plants danced in the breeze."
     jump scene2
 
 label scene2:
-    
+    play sound "page_turn.mp3"
     scene bg GreenGram
 
     show a_curious at left  
-    ami "Look at those green gram plants! They’re so vibrant and healthy. Did you know green gram is packed with protein? It’s a staple in our diet."
+    ami "Wow! Look at those green gram plants! So green and strong! They help us grow big and strong too!"
 
 menu:
-    "Want to know more about Green Gram? ":
+    "Learn about Green Gram? ":
         jump exp_choice2
     "I'm Good!":
         jump common2
 
 label exp_choice2:  
-
+    play sound “info.mp3”
     scene bg GreenGramMap
     with fade    
 
-    "Green gram, commonly known as Pesaru pappu, is a treasured native grain of Telangana that embodies the spirit of the region’s agricultural heritage."
-
+    "Green gram is called Pesaru pappu (పెసర పప్పు)  in Telangana. It’s small, green, and full of good stuff that helps you grow strong! You can eat it in salads, make yummy dal, or even mix it into atlu batter. Farmers love it, and so do families!"
     "Green Gram is popularly harvested in Sangareddy, Vikarabad, Narayanpet, Asifabad, Mahabubabad and Khammam in Telangana." 
 
     show bg GreenGram
     with dissolve
-    "With its vibrant green color and rich nutritional profile, this legume is not just a staple; it's a source of pride for local farmers and families alike." 
-
-    scene bg GreenGram
-    with fade
-
-    "Nutritional Marvel: Packed with protein, fiber, and essential vitamins, green gram is a powerhouse of nutrition. It contains approximately 24\% protein, making it an excellent choice for those seeking healthy, plant-based options. "
-    show bg GreenGram
-    with dissolve
-    "Its high fiber content aids digestion and provides a sense of fullness, making it a beloved ingredient in many households."
-    show bg GreenGram
-    with dissolve
-    "Culinary Versatility: In Telangana, green gram is celebrated for its versatility in the kitchen. Whether used whole in salads, cooked into comforting dals, or ground into flour for delicious **atlu**,  each preparation showcases its unique flavor and texture. "
-    
-    show bg GreenGram
-    with dissolve
-    "Cultural Significance: Beyond its culinary uses, green gram holds a special place in the hearts of the people of Telangana. It thrives in the region's fertile soil and is often grown alongside rice, symbolizing the harmony between crops that sustain families and communities."
-    
-    show bg GreenGram
-    with dissolve
-    "Green gram is more than just a grain; it represents nourishment, tradition, and community in Telangana. With every dish made from this vibrant legume—especially the beloved atlu—there’s a story of resilience and connection to the land. "
-    
+     
     jump common2
 
 label common2:
     jump scene3
 
 label scene3:
-
+    play sound “page_turn.mp3"
     scene bg BengalGram
 
     show k_smiletalk at right
     kon "Absolutely! And over there are the Bengal gram plants. They’re known for their nutty flavor and are perfect for making dal or adding to our attu batter."
 
 menu:
-    "Want to know more about Bengal Gram? ":
+    "Learn about Bengal Gram?":
         jump exp_choice3
     "I'm Good!":
         jump common3
@@ -164,18 +133,8 @@ label exp_choice3:
 
     scene bg BengalGramMap
     with fade
-    "Bengal gram, known locally as Chana or Chickpea, is a cherished native grain of Telangana, deeply woven into the region's agricultural and culinary fabric. This vibrant legume is a nutritional powerhouse—rich in protein, fiber, and essential vitamins."
+    "Bengal gram is also called Chana or Chickpea “సెనగ పప్పు”. It’s round, yellowish, and super healthy! People in Telangana use it to make crunchy, golden atlu and many other dishes. It’s a food full of flavor and love, passed down through generations."
     "Bengal gram is cultivated in districts like Adilabad, Nirmal, Nizamabad, Kamareddy, Sangareddy and Gadwal in Telangana."
-
-    scene bg BengalGram
-    with dissolve
-    "Culinary Delight: In Telangana, Bengal gram shines in the preparation of **atlu**, the delicious crepes that are a staple in local cuisine. Imagine the aroma of freshly ground Bengal gram mingling with spices, creating a batter that transforms into golden, crispy atlu on the hot griddle."
-
-    "Each bite is a celebration of texture and taste, evoking memories of home-cooked meals shared with family and friends."
-
-    "Cultural Heartbeat: Beyond its culinary versatility, Bengal gram holds cultural significance. It represents the heart of Telangana's farming community, thriving in the region's semi-arid climate and enriching the soil."
-
-    "In every atlu made with Bengal gram, there’s a story—a connection to the land and to each other. It’s this emotional bond that makes Bengal gram an irreplaceable part of Telangana’s identity."
 
     jump common3
 
@@ -189,14 +148,14 @@ label common3:
 
     show a_smiletalk at left
     ami "Now that we have everything, let’s soak these seeds and grind them into a batter."
-
+    play sound “collectgrains.mp3"
     show k_smilewide at right
     kon "I can already imagine how soft and fluffy those atlu will be!"
 
     "With laughter and excitement in the air, they prepared to create their delicious meal together. The aroma of fresh ingredients filled their senses as they looked forward to enjoying the fruits of their labor."
 
 label home:
-
+    play sound “footsteps.mp3"
     scene bg House
     with fade
 
@@ -204,25 +163,25 @@ label home:
 
     show a_normal at left
     ami "Now that we have everything, let’s soak these seeds and grind them together."
-
+    play sound “paper-rustle.mp3"
     show k_normal at right
     kon "I’ll start grinding while you go wash up at the pond. We need to hurry before it gets too hot!"
+    play sound “decision_twinkle.mp3"
 
 menu:
-    "KONTAMALLI’S POV(STAY AT HOME AND PREPARE ATLU?)":
+    "KONTAMALLI’S POV(Stay at home and prepare Yummy atlu?)":
         jump main_a
 
-    "AMIDALRAJI’S POV(GO TO THE POND?)":
+    "AMIDALRAJI’S POV(Head to pond for a splash and wash-up?)":
         jump main_b
 
 label main_a:
+    play sound “intro_to_game.mp3"
 
     scene bg House 
     with fade
 
     "Amidalraji nodded and dashed off to the pond, leaving Kontamalli to prepare the attu batter. "
-
-    
 
     show bg HouseFire
     with dissolve
@@ -231,12 +190,12 @@ label main_a:
 
     show bg plain_stove1
     with dissolve
-    kon "Kontamalli set up the stove to heat the pan and anticipated the first sizzle of the batter."
-    
+    "She carefully poured the batter into the hot pan. Ssssss!"
+    play sound "atly_sizling.mp3"
 
     show bg batter_pour2
     with dissolve
-    kon " As she poured the batter onto the cast iron pan, she couldn’t help but feel excited about the delicious meal ahead."
+    "As she poured the batter onto the cast iron pan, she couldn’t help but feel excited about the delicious meal ahead."
 
     show bg attu_onstove3   
     with dissolve
@@ -256,8 +215,8 @@ label main_a:
     show bg House
     with dissolve
     hide k_smilewide
-    "Time passed, and Amidalraji took longer than expected. Kontamalli’s stomach grumbled as she glanced at the steaming atlu. "
-
+    "The kitchen smelled amazing."
+    "But Amidalraji was taking a long time… and Kontamalli’s tummy was rumbling."
     show k_mouthopen at right
     kon "The atlu are ready! I can’t wait any longer."
 
@@ -266,10 +225,12 @@ label main_a:
 
     show k_pouting at right
     "After finishing her second attu, she thought about Amidalraji's return."
+    play sound “mischief.mp3"
 
     show k_eating at right
     kon "'I should save some for her... but just one more won't hurt!' She devoured another attu, leaving only one behind as she heard footsteps approaching."
-
+    play sound “crunch.mp3"
+    play sound “footsteps.mp3"
 
     show a_curious at left
     ami "I’m back! What about the atlu? I was so hungry!"
@@ -279,6 +240,7 @@ label main_a:
     
     show a_disappointed at left
     ami "How could you eat them all? We worked so hard to gather those ingredients!"
+    play sound “decision_twinkle.mp3"
 
 menu:
     "Be cheeky":
@@ -290,9 +252,11 @@ label main_a_1:
     hide k_smiletalk
     show k_eating at right
     kon  "'I ate them like this!' She mimicked taking big bites, hoping to bring a smile back to Amidāl Rāji's face."
+    play sound “eat_crunchy.mp3"
     jump main_a_common
 
 label main_a_2:
+    play sound “transition_from_scenetoscene.mp3"
     hide k_smiletalk
     show k_pouting at right
     kon "I’m sorry Amidalraji"
@@ -302,8 +266,7 @@ label main_a_2:
 
 label main_a_common:
     show a_disappointed at left
-    "Amidalraji sighed, feeling a mix of disappointment and amusement at her friend’s antics."
-
+    " Amidalraji sighed. She was a little sad... but also couldn’t stop smiling at her silly friend."
     show a_smiletalk at left    
     ami "Next time, let’s do it together. I won’t go to the pond if it means missing out on our atlu."
 
@@ -312,12 +275,13 @@ label main_a_common:
 
     show a_eyesclose_smilewide at left
     show k_eyesclose_smilewide at right
-    "The two friends laughed together, their bond strengthened by shared experiences and a love for food. They decided that no matter what happened next time, they would enjoy their cooking adventure together. This dialogue captures their friendship and the light-hearted nature of their cooking adventure."
-
+    "Only if I get to wash up next time. That way, I get the first bite!"
+    "play sound "laughing.mp3"
+    "The two friends burst into laughter."
     return
 
 label main_b:
-
+    play sound “transition_from_scenetoscene.mp3"
     scene bg pond_side
     with fade
     
@@ -581,23 +545,21 @@ label main_b:
     
 ################GAME GAME GAME GAME ######################################################
     label continuation:
-        show a_curious at left
-        ami "Finally, some time to freshen up! I can’t wait to dive into those hot atlu once I’m back."
+        play sound “water_splash.mp3"
 
-        "As she reached the pond, she took a moment to appreciate the tranquility of the water, the gentle ripples reflecting the sunlight. "
-        
+        show a_curious at left     
+        play sound “water_splash.mp3"
+        play sound “water_splash.mp3"
+    
+        ami "Time for a quick splash! I’ll feel fresh—and ready for hot atlu!"
         show a_normal at left
         ami "Ah, this feels refreshing! A quick wash will do wonders. I hope Kontamalli is grinding that batter well."
-
-        "After bathing and washing her clothes, Amidalraji felt rejuvenated. She glanced back toward their spot under the tree, eager to return. "
-
-        show a_smiletalk at left
-        ami  "I hope she’s not waiting too long. Those atlu will be perfect when they’re hot!"
-
+        "She dipped her hands in the cool water and smiled. The pond sparkled in the sunlight, and little fish zipped by."
         "With a spring in her step, she hurried back, her stomach rumbling in anticipation of the delicious meal. As she approached their resting place, the aroma of freshly cooked atlu wafted through the air, making her mouth water. "
 
         show bg HouseFire
         with dissolve
+        play sound “footsteps.mp3"
 
         show a_smilewide at left
         ami "Kontamalli! I’m back! I can already smell those atlu!"
@@ -615,6 +577,7 @@ label main_b:
         "Kontamalli watched as Amidāl Rāji's expression shifted from excitement to disappointment. "
 
         kon "I couldn’t resist! They were so hot and delicious. Look, I saved one for you!"
+        play sound “decision_twinkle.mp3"
 
 menu:
     "Decide to scold her":
@@ -623,7 +586,7 @@ menu:
         jump main_b_2
 
 label main_b_1:
-
+    play sound “transition_from_scenetoscene.mp3"
     show a_disappointed at left
     ami "How could you eat them all? We worked so hard to gather those ingredients!"
 
@@ -646,8 +609,9 @@ label main_b_common:
     show k_smiletalk at right
     kon "Next time, let’s do it together! But you know what? I’ll only help if you send me off to the pond again for a wash!"
 
+    play sound “laughing.mp3"
     show a_eyesclose_smilewide at left
     show k_eyesclose_smilewide at right
     "With laughter bubbling between them, Amidalraji realized that even in moments of mischief, their friendship remained strong. The bond they shared over food and fun was what truly mattered."
-
+    
     return
