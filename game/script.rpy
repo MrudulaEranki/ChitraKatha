@@ -7,6 +7,9 @@ image bg pond_side = im.Scale("pond_side.jpg", 1920, 1080)
 
 image bg pond = im.Scale("minigame_fish_catcher/pond_side.jpg", 1920, 1080)
 
+image bg UnderTreeBg = im.Scale("under_tree_bg.jpg", 1920, 1080)
+image bg UnderTreeBgDark = im.Scale("under_tree_bg_dark.jpg", 1920, 1080)
+
 image bg TelanganaMap = im.Scale("TelanganaMap.jpg", 1920, 1080)
 image bg House= im.Scale("House.jpg", 1920, 1080)
 image bg HouseFire= im.Scale("HouseFire.jpg", 1920, 1080)     
@@ -47,9 +50,9 @@ define kon = Character('Kontamalli')
 
 
 label start:
-    play music "throughout_the_game.mp3"
+    play music "throughout_the_game_music.mp3"
     #Scene 1
-    scene bg pond_side
+    scene bg UnderTreeBg
     with fade
     "The sun was going down. Amidalraji and Kontamalli sat under a big banyan tree. The leaves rustled, and birds chirped. It was a nice, quiet time to talk."
 
@@ -59,6 +62,16 @@ label start:
     show k_smilewide at right
     kon  "Yum! Let’s go get what we need from the fields but before that let’s play a mini game!!"
     play sound "excited_twinkle1.mp3"
+
+    label game:
+        # "Let's play a quick mini-game!"
+        call krix  # This calls your mini-game
+        "Nice! You scored [pointk] points!"
+        
+        # jump hehe
+
+    show k_smilewide at right
+    kon "Phew! That was a good game! You did great! Now, let’s go get the ingredients for our atlu!"
     
     menu:
         "What are atlu? ":
@@ -71,20 +84,24 @@ label exp_choice1:
     with fade
     play sound "atly_sizling.mp3"
     "Amidalraji and Kontamalli loved atlu! Atlu are yummy, thin pancakes from Telangana. They can be soft or crispy, and you can make them in many fun ways!
-    Some atlu are made with rice flour and spicy stuff like chili, onions, and curry leaves. Others are sweet and soft, like the ones made with corn. You can even mix in veggies like ridge gourd to make them extra tasty!
-    Cooking atlu is fun too! Pour the batter on a hot pan, wait for the sizzle... and flip! It smells so good! You can eat them with chutney, pickles, or even a little jaggery for sweetness. Mmm... so many flavors!"
+    Some atlu are made with rice flour and spicy stuff like chilli, onions, and curry leaves." 
+
+    
+    "Others are sweet and soft, like the ones made with corn. You can even mix in veggies like ridge gourd to make them extra tasty!"
+    "Cooking atlu is fun too! Pour the batter on a hot pan, wait for the sizzle... and flip! It smells so good! You can eat them with chutney, pickles, or even a little jaggery for sweetness. Mmm... so many flavors!"
+    stop sound fadeout 1.0
     jump common1
 
 label common1:
 
-    scene bg TelanganaMap
-    "Amidalraji and Kontamalli smiled big. They were already thinking about soft, yummy atlu!
+    scene bg UnderTreeBg
+    "Amidalraji and Kontamalli smiled big. They were already thinking about soft, yummy atlu!"
 
     show a_normal at left
-    ami  "Let’s get some gram—it’ll make our batter super tasty!
+    ami  "Let’s get some gram—it’ll make our batter super tasty!"
     hide a_normal
 
-     "Off they went into the fields. The air smelled fresh, and little plants danced in the breeze."
+    "Off they went into the fields. The air smelled fresh, and little plants danced in the breeze."
     jump scene2
 
 label scene2:
@@ -101,23 +118,21 @@ menu:
         jump common2
 
 label exp_choice2:  
-    play sound “info.mp3”
+    play sound "info.mp3"
     scene bg GreenGramMap
     with fade    
 
-    "Green gram is called Pesaru pappu (పెసర పప్పు)  in Telangana. It’s small, green, and full of good stuff that helps you grow strong! You can eat it in salads, make yummy dal, or even mix it into atlu batter. Farmers love it, and so do families!"
+    "Green gram is called Pesaru pappu in Telangana. It’s small, green, and full of good stuff that helps you grow strong! You can eat it in salads, make yummy dal, or even mix it into atlu batter. Farmers love it, and so do families!"
     "Green Gram is popularly harvested in Sangareddy, Vikarabad, Narayanpet, Asifabad, Mahabubabad and Khammam in Telangana." 
 
-    show bg GreenGram
-    with dissolve
-     
+    
     jump common2
 
 label common2:
     jump scene3
 
 label scene3:
-    play sound “page_turn.mp3"
+    play sound "pageturn.mp3"
     scene bg BengalGram
 
     show k_smiletalk at right
@@ -133,14 +148,14 @@ label exp_choice3:
 
     scene bg BengalGramMap
     with fade
-    "Bengal gram is also called Chana or Chickpea “సెనగ పప్పు”. It’s round, yellowish, and super healthy! People in Telangana use it to make crunchy, golden atlu and many other dishes. It’s a food full of flavor and love, passed down through generations."
+    "Bengal gram is also called Chana or Chickpea. It’s round, yellowish, and super healthy! People in Telangana use it to make crunchy, golden atlu and many other dishes. It’s a food full of flavor and love, passed down through generations."
     "Bengal gram is cultivated in districts like Adilabad, Nirmal, Nizamabad, Kamareddy, Sangareddy and Gadwal in Telangana."
 
     jump common3
 
 label common3:
 
-    scene bg pond_side 
+    scene bg UnderTreeBg 
     with fade   
     "They continued their exploration, admiring the variety of crops around them."
 
@@ -148,14 +163,14 @@ label common3:
 
     show a_smiletalk at left
     ami "Now that we have everything, let’s soak these seeds and grind them into a batter."
-    play sound “collectgrains.mp3"
+    play sound "collectgrains.mp3"
     show k_smilewide at right
     kon "I can already imagine how soft and fluffy those atlu will be!"
 
     "With laughter and excitement in the air, they prepared to create their delicious meal together. The aroma of fresh ingredients filled their senses as they looked forward to enjoying the fruits of their labor."
 
 label home:
-    play sound “footsteps.mp3"
+    play sound "footsteps.mp3"
     scene bg House
     with fade
 
@@ -163,10 +178,10 @@ label home:
 
     show a_normal at left
     ami "Now that we have everything, let’s soak these seeds and grind them together."
-    play sound “paper-rustle.mp3"
+    play sound "paper-rustle.mp3"
     show k_normal at right
     kon "I’ll start grinding while you go wash up at the pond. We need to hurry before it gets too hot!"
-    play sound “decision_twinkle.mp3"
+    play sound "decision_twinkle.mp3"
 
 menu:
     "KONTAMALLI’S POV(Stay at home and prepare Yummy atlu?)":
@@ -176,7 +191,7 @@ menu:
         jump main_b
 
 label main_a:
-    play sound “intro_to_game.mp3"
+    play sound "intro_to_game.mp3"
 
     scene bg House 
     with fade
@@ -211,6 +226,7 @@ label main_a:
     show bg brown_attu_spoon5
     with dissolve
     kon "This attu is ready and let's make some more!"
+    stop sound fadeout 1.0
 
     show bg House
     with dissolve
@@ -225,12 +241,12 @@ label main_a:
 
     show k_pouting at right
     "After finishing her second attu, she thought about Amidalraji's return."
-    play sound “mischief.mp3"
+    play sound "mischief.mp3"
 
     show k_eating at right
     kon "'I should save some for her... but just one more won't hurt!' She devoured another attu, leaving only one behind as she heard footsteps approaching."
-    play sound “crunch.mp3"
-    play sound “footsteps.mp3"
+    play sound "crunch.mp3"
+    # play sound "footsteps.mp3"
 
     show a_curious at left
     ami "I’m back! What about the atlu? I was so hungry!"
@@ -240,7 +256,7 @@ label main_a:
     
     show a_disappointed at left
     ami "How could you eat them all? We worked so hard to gather those ingredients!"
-    play sound “decision_twinkle.mp3"
+    play sound "decision_twinkle.mp3"
 
 menu:
     "Be cheeky":
@@ -252,11 +268,11 @@ label main_a_1:
     hide k_smiletalk
     show k_eating at right
     kon  "'I ate them like this!' She mimicked taking big bites, hoping to bring a smile back to Amidāl Rāji's face."
-    play sound “eat_crunchy.mp3"
+    play sound "eat_crunchy.mp3"
     jump main_a_common
 
 label main_a_2:
-    play sound “transition_from_scenetoscene.mp3"
+    play sound "transition_from_scenetoscene.mp3"
     hide k_smiletalk
     show k_pouting at right
     kon "I’m sorry Amidalraji"
@@ -276,12 +292,12 @@ label main_a_common:
     show a_eyesclose_smilewide at left
     show k_eyesclose_smilewide at right
     "Only if I get to wash up next time. That way, I get the first bite!"
-    "play sound "laughing.mp3"
+    play sound "laughing.mp3"
     "The two friends burst into laughter."
     return
 
 label main_b:
-    play sound “transition_from_scenetoscene.mp3"
+    play sound "transition_from_scenetoscene.mp3"
     scene bg pond_side
     with fade
     
@@ -545,11 +561,11 @@ label main_b:
     
 ################GAME GAME GAME GAME ######################################################
     label continuation:
-        play sound “water_splash.mp3"
+        play sound "water_splash.mp3"
 
         show a_curious at left     
-        play sound “water_splash.mp3"
-        play sound “water_splash.mp3"
+        play sound "water_splash.mp3"
+        play sound "water_splash.mp3"
     
         ami "Time for a quick splash! I’ll feel fresh—and ready for hot atlu!"
         show a_normal at left
@@ -559,15 +575,15 @@ label main_b:
 
         show bg HouseFire
         with dissolve
-        play sound “footsteps.mp3"
+        # play sound "footsteps.mp3"
 
         show a_smilewide at left
         ami "Kontamalli! I’m back! I can already smell those atlu!"
 
-        show k_sad at right
+        show k_normal at right
         "Upon seeing Amidāl Rāji's expectant face, Kontamalli couldn’t help but feel a twinge of guilt as she recalled how hungry she was. "
 
-        show a_curious at left
+        show a_normal at left
         ami "What about the atlu? I was very hungry and came back to eat them."
 
         show k_normal at right
@@ -577,7 +593,7 @@ label main_b:
         "Kontamalli watched as Amidāl Rāji's expression shifted from excitement to disappointment. "
 
         kon "I couldn’t resist! They were so hot and delicious. Look, I saved one for you!"
-        play sound “decision_twinkle.mp3"
+        play sound "decision_twinkle.mp3"
 
 menu:
     "Decide to scold her":
@@ -586,7 +602,7 @@ menu:
         jump main_b_2
 
 label main_b_1:
-    play sound “transition_from_scenetoscene.mp3"
+    play sound "transition_from_scenetoscene.mp3"
     show a_disappointed at left
     ami "How could you eat them all? We worked so hard to gather those ingredients!"
 
@@ -609,7 +625,7 @@ label main_b_common:
     show k_smiletalk at right
     kon "Next time, let’s do it together! But you know what? I’ll only help if you send me off to the pond again for a wash!"
 
-    play sound “laughing.mp3"
+    play sound "laughing.mp3"
     show a_eyesclose_smilewide at left
     show k_eyesclose_smilewide at right
     "With laughter bubbling between them, Amidalraji realized that even in moments of mischief, their friendship remained strong. The bond they shared over food and fun was what truly mattered."
