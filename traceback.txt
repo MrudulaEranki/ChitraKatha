@@ -1,24 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 107, in script
-    "Nutritional Marvel: Packed with protein, fiber, and essential vitamins, green gram is a powerhouse of nutrition. It contains approximately 24% protein, making it an excellent choice for those seeking healthy, plant-based options. Its high fiber content aids digestion and provides a sense of fullness, making it a beloved ingredient in many households."
-ValueError: unsupported format character 'p' (0x70) at index 143
+  File "game/script.rpy", line 573, in script
+    python:
+ScriptError: could not find label 'continuation'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 107, in script
-    "Nutritional Marvel: Packed with protein, fiber, and essential vitamins, green gram is a powerhouse of nutrition. It contains approximately 24% protein, making it an excellent choice for those seeking healthy, plant-based options. Its high fiber content aids digestion and provides a sense of fullness, making it a beloved ingredient in many households."
-  File "C:\Users\Dell\Downloads\renpy-8.3.4-sdk\renpy\ast.py", line 2579, in execute
-    Say.execute(self)
-  File "C:\Users\Dell\Downloads\renpy-8.3.4-sdk\renpy\ast.py", line 621, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Dell\Downloads\renpy-8.3.4-sdk\renpy\exports\sayexports.py", line 121, in say
-    what = what % tag_quoting_dict
-ValueError: unsupported format character 'p' (0x70) at index 143
+  File "C:\Users\Dell\Downloads\renpy-8.3.4-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Dell\Downloads\renpy-8.3.4-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "C:\Users\Dell\Downloads\renpy-8.3.4-sdk\renpy\main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\Dell\Downloads\renpy-8.3.4-sdk\renpy\execution.py", line 958, in run_context
+    context.run()
+  File "game/script.rpy", line 573, in script
+    python:
+  File "C:\Users\Dell\Downloads\renpy-8.3.4-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'continuation'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.4.24120703
 hackathonproject2 1.0
-Fri Feb 21 12:30:51 2025
+Thu Apr 10 15:01:47 2025
