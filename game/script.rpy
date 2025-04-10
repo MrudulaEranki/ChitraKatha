@@ -42,6 +42,7 @@ define ami = Character('Amidalraji')
 define kon = Character('Kontamalli')
 
 
+
 label start:
 
     #Scene 1
@@ -64,21 +65,28 @@ label start:
             jump common1
     
 label exp_choice1:
-    scene bg brown_attu4
-    with fade
-    "Atlu, a delightful food item from Telangana, is a type of crepe or dosa that embodies the essence of traditional South Indian cuisine. These thin, crispy delights are made from various flours, with rice flour being the most common base."
+    label game:
+        "Let's play a quick mini-game!"
+        call krix  # This calls your mini-game
+        "Nice! You scored [pointk] points!"
+        
+        jump hehe
+    label hehe:
+        scene bg brown_attu4
+        with fade
+        "Atlu, a delightful food item from Telangana, is a type of crepe or dosa that embodies the essence of traditional South Indian cuisine. These thin, crispy delights are made from various flours, with rice flour being the most common base."
 
-    "The Allure of Atlu- Imagine biting into a perfectly cooked attu, its surface golden brown and slightly crisp. The aroma of freshly ground spices wafts through the air as you savor the first bite."
-    "The texture is delightfully chewy yet crisp, with a hint of spice that dances on your palate. "
+        "The Allure of Atlu- Imagine biting into a perfectly cooked attu, its surface golden brown and slightly crisp. The aroma of freshly ground spices wafts through the air as you savor the first bite."
+        "The texture is delightfully chewy yet crisp, with a hint of spice that dances on your palate. "
 
-    "Atlu can be prepared using different flours such as rice flour, maize flour, or even jowar flour, each bringing its own character to the dish."
+        "Atlu can be prepared using different flours such as rice flour, maize flour, or even jowar flour, each bringing its own character to the dish."
 
 
-    "The process of making atlu is as exciting as eating them! From grinding the grains to mixing in spices and cooking them on a hot griddle, every step is filled with anticipation."
-    "As the batter sizzles on the pan, it transforms into a golden masterpiece that beckons you to indulge. Atlu can be served in various ways—paired with spicy chutneys, tangy pickles, or even sweet accompaniments like jaggery syrup for those who enjoy contrasting flavors."
-    " Whether enjoyed as breakfast, a snack, or part of a festive meal, atlu brings people together around the table. In Telangana, where culinary traditions run deep, atlu stand out as not just food but as a celebration of local ingredients and flavors."
+        "The process of making atlu is as exciting as eating them! From grinding the grains to mixing in spices and cooking them on a hot griddle, every step is filled with anticipation."
+        "As the batter sizzles on the pan, it transforms into a golden masterpiece that beckons you to indulge. Atlu can be served in various ways—paired with spicy chutneys, tangy pickles, or even sweet accompaniments like jaggery syrup for those who enjoy contrasting flavors."
+        " Whether enjoyed as breakfast, a snack, or part of a festive meal, atlu brings people together around the table. In Telangana, where culinary traditions run deep, atlu stand out as not just food but as a celebration of local ingredients and flavors."
 
-    jump common1
+        jump common1
 
 label common1:
 
