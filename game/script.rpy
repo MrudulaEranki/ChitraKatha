@@ -69,7 +69,7 @@ label start:
         "Nice! You scored [pointk] points!"
         
         # jump hehe
-    stop music fadeout 1.0
+   # stop music fadeout 1.0
     play music "throughout_the_game_music.mp3" fadein 1.0
 
     show k_smilewide at right
