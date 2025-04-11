@@ -298,6 +298,7 @@ label krich:
     return
 label krix:
     scene kg
+    play music "game1music.mp3" fadein 1.0
     python:
         cl0,cl1,cl2,cl3,cl4,cl5,cl6,cl7,krix,kriy,kris,krin,kriw,krie,kricol,krix,krix0,kriy,kriy0,pointk,pointloop,ktmr,pointka=[],[],[],[],[],[],[],[],0,0,0,0,0,0,0,-1,-1,-1,-1,0,0,30,0 #seconds 60
         for z in range(1,7):
