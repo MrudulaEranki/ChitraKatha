@@ -69,6 +69,8 @@ label start:
         "Nice! You scored [pointk] points!"
         
         # jump hehe
+    stop music fadeout 1.0
+    play music "throughout_the_game_music.mp3" fadein 1.0
 
     show k_smilewide at right
     kon "Phew! That was a good game! You did great! Now, let’s go get the ingredients for our atlu!"
@@ -302,6 +304,7 @@ label main_b:
     with fade
     
     "As Amidalraji made her way to the pond, she felt a mix of excitement and anticipation. The prospect of enjoying the atlu they had worked so hard to prepare filled her with joy. "
+    play music "soda_crush.mp3" fadein 1.0
 
 ################GAME GAME GAME GAME ######################################################
     python:
@@ -561,7 +564,10 @@ label main_b:
     
 ################GAME GAME GAME GAME ######################################################
     label continuation:
+        play music "throughout_the_game_music.mp3" fadein 1.0   
+
         play sound "water_splash.mp3"
+
 
         show a_curious at left     
         play sound "water_splash.mp3"
