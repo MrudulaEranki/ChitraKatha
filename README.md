@@ -2,6 +2,6 @@ ChitraKatha – A Visual Game story is an AI-powered interactive storytelling pl
 
 
 To play game, click on the link below:
----> 
+---> https://chitrakathavisual.itch.io/chitrakatha
 
 Extract the zip file and just click on .exe file!
